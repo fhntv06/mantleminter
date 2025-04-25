@@ -74,22 +74,22 @@ const Header = ({
 
 
   return (
-    <header className="w-full border-b border-[#2B2B2B] border-l border-r rounded-bl-[25px] sm:rounded-bl-[50px] rounded-br-[25px] sm:rounded-br-[50px] relative z-[10]">
+    <header className="w-full bg-[#16023F] rounded-bl-[25px] sm:rounded-bl-[50px] rounded-br-[25px] sm:rounded-br-[50px] relative z-10">
       <div className="max-w-[1150px] mx-auto px-4 sm:px-5.5 py-3 sm:py-4 flex justify-between items-center">
-        <div className="flex items-center gap-2 cursor-pointer">
+        <div className="flex items-center gap-2 cursor-pointer h-[38px]">
           <a onClick={handleClearAddress}>
-            <img src="/img/logo.png" alt="Mantle Logo" className="h-8 sm:h-10.5" />
+            <img src="/img/logo.png" alt="Mantle Logo" className="h-6" />
           </a>
         </div>
         
         <div className="flex items-center gap-2">
           <button
             ref={buttonRef}
-            className="relative bg-[#543926] text-white px-2 sm:px-3 py-1.5 rounded-full flex items-center gap-1 sm:gap-2 text-[0.75rem] sm:text-[0.825rem]"
+            className="relative border-[1px] min-w-40 border-[#ffffff] hover:bg-[#16023F] text-white px-2 sm:px-3 py-1.5 rounded-full flex items-center gap-1 sm:gap-2 text-[0.75rem] sm:text-[0.825rem]"
             onClick={handleWalletClick}
           >
-            <div className="hidden xs:flex items-center gap-2">
-              <span>{account ? account.slice(0, 6) + '...' + account.slice(-4) : "Connect Wallet"}</span>
+            <div className="hidden xs:flex items-center justify-center gap-2 w-full">
+              {account ? account.slice(0, 6) + '...' + account.slice(-4) : "Connect Wallet"}
               {account && <img src="/img/pepe.png" alt="pepe" className="w-4 h-4" />}
             </div>
             {account && showDropdown && (

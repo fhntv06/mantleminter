@@ -23,10 +23,6 @@ html, body {
 
 }
 
-footer {
-  background: black;
-}
-
 #root {
   min-height: 100%;
   display: flex;
@@ -35,24 +31,18 @@ footer {
   overflow: hidden;
 }
 
-header{
-      backdrop-filter: blur(20px);
-}
-
 .background-element {
   position: fixed;
   top: 0;
-  right: -40px;
-  width: 50%;
-  height: 100vh;
+  right: -338px;
+  width: 1127px;
+  height: 1127px;
   background-image: url(/bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  animation: slow-rotate 180s linear infinite;
-  z-index: 0;
+  /*animation: slow-rotate 180s linear infinite;*/
   pointer-events: none;
-  filter: blur(12px);
 }
 
 @keyframes slow-rotate {
@@ -178,9 +168,7 @@ header{
 }
 
 .glass-card {
-  background: rgba(26, 26, 26, 0.4);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
 }
 
 /* Remove default focus styles */

@@ -3,7 +3,7 @@ import SocialIcons from './SocialIcons';
 
 const Footer = () => {
   return (
-    <footer className="border-t border-[#333] py-2.75 mt-auto">
+    <footer className="border-t border-[#333] py-2.75 mt-auto z-10">
        <SocialIcons />
       <div className="max-w-[1150px] mx-auto px-4 sm:px-5.5">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-0">

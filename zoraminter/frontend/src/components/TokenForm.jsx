@@ -259,7 +259,7 @@ const TokenForm = ({
             onClick={handleResetFields}
           />
           <div>
-            <h2 className="text-lg sm:text-[1.35rem] font-semibold flex items-center gap-1">
+            <h2 className="text-lg sm:text-[2rem] flex items-center gap-1">
               <span>{tokenName || 'Token Name'}</span>
               {tokenSymbol && <span>({tokenSymbol})</span>}
             </h2>
@@ -460,7 +460,7 @@ const TokenForm = ({
               placeholder="Token Name"
               value={tokenName}
               onChange={(e) => setTokenName(e.target.value.slice(0, 12))}
-              className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem]"
+              className="w-full bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
             />
             <p className="text-[0.725rem] text-gray-400 mt-1.75 ml-4">
               Your project unabbreviated name with spaces (usually 1-3 words).{' '}
@@ -476,7 +476,7 @@ const TokenForm = ({
               placeholder="Token Symbol"
               value={tokenSymbol}
               onChange={(e) => setTokenSymbol(e.target.value.slice(0, 5))}
-              className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem]"
+              className="w-full bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
             />
             <p className="text-[0.725rem] text-gray-400 mt-1.75 ml-4">
               Currency symbol appearing in balance (usually 3-5 uppercase chars).{' '}
@@ -486,7 +486,7 @@ const TokenForm = ({
             </p>
           </div>
           <input
-            className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem] mt-5"
+            className="w-full bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem] mt-5"
             placeholder="Decimal"
             type="number"
             max="18"
@@ -519,7 +519,7 @@ const TokenForm = ({
               const rawValue = e.target.value.replace(/\D/g, '');
               setTokensToMint(Math.min(5000000000, rawValue));
             }}
-            className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem]"
+            className="w-full bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
           />
 
             <p className="text-[0.725rem] text-gray-400 mt-1.75 ml-4">
@@ -534,7 +534,7 @@ const TokenForm = ({
             <button
               onClick={account ? handleMintToken : connectWallet}
               disabled={loading}
-              className="ripple-button bg-[#543926] hover:bg-[#5d3a22] text-white px-4 sm:px-6 py-2 rounded-full flex items-center gap-2 sm:gap-3 text-[0.825rem] sm:text-[0.925rem] transition-all duration-200"
+              className="ripple-button hover:bg-[#16023F] text-white px-4 sm:px-6 py-2 rounded-full flex items-center border-[1px] min-w-40 border-[#ffffff] gap-2 sm:gap-3 text-[0.825rem] sm:text-[0.925rem] transition-all duration-200"
               onMouseDown={(e) => {
                 const button = e.currentTarget;
                 const ripple = document.createElement('span');

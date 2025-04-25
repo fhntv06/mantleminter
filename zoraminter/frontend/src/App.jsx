@@ -88,7 +88,7 @@ function App() {
         return;
       }
 
-      const polygonId ='0x1388';  
+      const polygonId ='0x1388';
       try {
           await ethereum.request({
               method: 'wallet_switchEthereumChain',
@@ -96,7 +96,7 @@ function App() {
           });
       } catch (error) {
           console.error(error);
-      } 
+      }
 
 
       const accounts = await window.ethereum.request({ method: 'eth_accounts' });
@@ -142,7 +142,7 @@ function App() {
     const newHistory = [
       address,
       ...addressHistory.filter(a => a !== address)
-    ].slice(0, 10); 
+    ].slice(0, 10);
     
     setAddressHistory(newHistory);
     console.log('work')
@@ -239,37 +239,37 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-black">
+    <div className="min-h-screen flex flex-col bg-[#1B024F]">
       <div className="background-element" />
       <div className="fixed bottom-0 left-0 z-[999]">
         {(notification.message || localNotification.message) && (
-          <Notification 
+          <Notification
             notification={notification.message ? notification : localNotification}
             onClose={() => {
               setNotification({ message: null, color: '#C58D00' });
               setLocalNotification({ message: null, color: '#C58D00' });
-            }} 
+            }}
           />
         )}
       </div>
       
-      <WalletModal 
-        isOpen={isWalletModalOpen} 
-        onClose={() => setIsWalletModalOpen(false)} 
+      <WalletModal
+        isOpen={isWalletModalOpen}
+        onClose={() => setIsWalletModalOpen(false)}
       />
       
-      <HelpModal 
-        isOpen={isHelpModalOpen} 
-        onClose={() => setIsHelpModalOpen(false)} 
+      <HelpModal
+        isOpen={isHelpModalOpen}
+        onClose={() => setIsHelpModalOpen(false)}
       />
       
-      <MainModal 
-        isOpen={isModalOpen} 
+      <MainModal
+        isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         coins={coins}
       />
 
-      <Header 
+      <Header
         onOpenModal={() => setIsModalOpen(true)}
         addressInputRef={addressInputRef}
         tokenAddress={tokenAddress}
@@ -299,11 +299,14 @@ function App() {
         setTokensToMint={setTokensToMint}
       />
 
-      <main className="flex-grow bg-black py-2.5">
+      <main className="flex-grow py-2.5 z-10">
         <div className="max-w-[1150px] mx-auto px-4 sm:px-5.5">
-
-          <h1 className="text-2xl sm:text-[2rem] mt-6 sm:mt-10 font-bold mb-4 sm:mb-5.5">Mint your token</h1>
-
+          
+          <div className='flex flex-col max-w-[350px]'>
+            <h1 className="text-2xl sm:text-[2rem] mt-6 sm:mt-10 mb-4 sm:mb-5.5">Mint your token</h1>
+            <div className="h-[2px] w-full bg-gradient-to-r from-white to-transparent mb-5"></div>
+          </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-6 sm:gap-10 lg:gap-20 mb-10 sm:mb-20">
             <TokenForm
               tokenName={tokenName}
@@ -311,7 +314,7 @@ function App() {
               tokenSymbol={tokenSymbol}
               setTokenSymbol={setTokenSymbol}
               tokensToMint={tokensToMint}
-              setTokensToMint={setTokensToMint} 
+              setTokensToMint={setTokensToMint}
               setNotification={setNotification}
               owner={owner}
               account={account}

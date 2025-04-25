@@ -66,7 +66,7 @@ const AddressInput = forwardRef(({
         return;
       }
 
-      const polygonId ='0x1388';  
+      const polygonId ='0x1388';
       try {
           await ethereum.request({
               method: 'wallet_switchEthereumChain',
@@ -74,7 +74,7 @@ const AddressInput = forwardRef(({
           });
       } catch (error) {
           console.error(error);
-      } 
+      }
 
       const provider = new ethers.BrowserProvider(window.ethereum);
       const contract = new ethers.Contract(tokenAddress, TOKEN_ABI, provider);
@@ -153,7 +153,7 @@ const AddressInput = forwardRef(({
       setBalance(null);
     }
     else {
-      
+    
     setTokenAddress(e.target.value)
     }
 
@@ -171,7 +171,7 @@ const AddressInput = forwardRef(({
         onKeyDown={handleKeyDown}
         onBlur={handleBlur}
         onFocus={() => setShowAddressHistory(true)}
-        className="w-full bg-[#1A1A1A] border border-[#333] rounded-full py-2.75 pl-11 pr-4 text-white placeholder-gray-400 text-[0.925rem]"
+        className="w-full bg-[transparent] border border-[#fff] rounded-xl py-2.75 pl-11 pr-4 text-white placeholder-gray-400 text-[0.925rem]"
       />
       <p className="text-[0.725rem] text-gray-400 mt-1.75 ml-4">
         Enter an existing token contract address.{' '}
@@ -190,7 +190,7 @@ const AddressInput = forwardRef(({
             >
               <RotateCcw size={16} className="mr-2" />
               <span className="truncate">{address}</span>
-              <button 
+              <button
                 className="ml-auto text-white hover:text-gray-500"
                 onClick={(e) => {
                   e.stopPropagation();
@@ -203,7 +203,7 @@ const AddressInput = forwardRef(({
           ))}
         </div>
       )}
-{/* 
+{/*
       {owner && (
         <div className="mt-2 text-white text-sm">
           <p>Token Symbol: {tokenSymbol}</p>
