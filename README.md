@@ -1,2 +1,2 @@
 # mantleminter
-Some many projects for work
+Many minters
