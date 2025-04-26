@@ -5,7 +5,7 @@ const WalletConnectModal = ({ isOpen, onClose, uri }) => {
   if (!isOpen || !uri) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-[999]">
+    <div className="fixed inset-0 bg-[#1B024F] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[999]">
       <div className="bg-[rgba(17,17,17,0.9)] p-6 rounded-2xl border border-white relative">
         <button 
           onClick={onClose}

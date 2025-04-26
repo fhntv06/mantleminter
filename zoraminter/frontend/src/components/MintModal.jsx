@@ -102,7 +102,7 @@ const MintModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm flex items-center justify-center z-[99] transition-opacity duration-600 ease-in-out"
+      className="fixed inset-0 bg-[#1B024F] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[99] transition-opacity duration-600 ease-in-out"
       style={{ opacity: isOpen ? 1 : 0 }}
       onClick={onClose}
     >
