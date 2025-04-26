@@ -446,7 +446,7 @@ const TokenForm = ({
             onClick={handleResetFields}
           />
           <div>
-            <h2 className="text-lg sm:text-[1.35rem] font-semibold flex items-center gap-1">
+            <h2 className="text-lg sm:text-4xl flex items-center gap-1">
               <span>{tokenName || 'Token Name'}</span>
               <span>({tokenSymbol || 'Symbol'})</span>
             </h2>

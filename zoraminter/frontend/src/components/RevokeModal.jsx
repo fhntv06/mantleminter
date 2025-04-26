@@ -69,7 +69,7 @@ const RevokeModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddre
           onClick={onClose}
           className="absolute right-4 top-4 text-white hover:text-gray-300"
         >
-          <X size={24} />
+          <X size={24} color='#fff' strokeWidth={4} />
         </button>
 
         <h2 className="text-2xl font-bold text-white mb-4">

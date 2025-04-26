@@ -11,27 +11,22 @@ const WalletModal = ({ isOpen, onClose }) => {
     >
       <div
         onClick={e => e.stopPropagation()}
-        className="modal-content"
+        className="modal-content px-20 py-4 bg-[#0D0029]"
         style={{
-          width: '90%',
-          maxWidth: '500px',
-          minHeight: '200px',
-          background: 'rgba(17, 17, 17, 0.1)',
           borderRadius: '24px',
           position: 'relative',
-          border: 'solid white 1px',
         }}
       >
-        <div className="relative z-10 p-6 sm:p-8 md:p-12 flex flex-col items-center justify-center h-full">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full">
           {/* <button
             onClick={onClose}
             className="absolute right-4 top-4 text-gray-400 hover:text-white"
           >
-            <X size={24} />
+            <X size={24} color='#fff' strokeWidth={4} />
           </button> */}
 
           <img
-            src="/img/modal-circle.png"
+            src="/img/loader.png"
             alt="Confirm Transaction"
             className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
           />

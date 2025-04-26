@@ -300,7 +300,7 @@ function App() {
       />
 
       <main className="flex-grow py-2.5 z-10">
-        <div className="max-w-[1150px] mx-auto px-4 sm:px-5.5">
+        <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5">
           
           <div className='flex flex-col max-w-[350px]'>
             <h1 className="text-2xl sm:text-[2rem] mt-6 sm:mt-10 mb-4 sm:mb-5.5">Mint your token</h1>

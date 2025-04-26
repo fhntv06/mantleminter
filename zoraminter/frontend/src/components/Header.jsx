@@ -75,7 +75,7 @@ const Header = ({
 
   return (
     <header className="w-full bg-[#16023F] rounded-bl-[25px] sm:rounded-bl-[50px] rounded-br-[25px] sm:rounded-br-[50px] relative z-10">
-      <div className="max-w-[1150px] mx-auto px-4 sm:px-5.5 py-3 sm:py-4 flex justify-between items-center">
+      <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5 py-3 sm:py-4 flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer h-[38px]">
           <a onClick={handleClearAddress}>
             <img src="/img/logo.png" alt="Mantle Logo" className="h-6" />
@@ -108,7 +108,7 @@ const Header = ({
         </div>
       </div>
       
-      <div className="max-w-[1150px] mx-auto px-4 sm:px-5.5">
+      <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5">
         <AddressInput
           ref={addressInputRef}
           tokenAddress={tokenAddress}

@@ -37,7 +37,7 @@ const HelpModal = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="absolute right-4 top-4 text-gray-400 hover:text-white"
           >
-            <X size={24} />
+            <X size={24} color='#fff' strokeWidth={4} />
           </button>
 
           <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 text-white">

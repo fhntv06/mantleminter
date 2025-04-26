@@ -17,7 +17,7 @@ const ModalHeader = React.memo(({ onClose }) => (
       onClick={onClose}
       className="absolute right-4 top-4 hover:text-white"
     >
-      <X size={30} />
+      <X size={24} color='#fff' strokeWidth={4} />
     </button>
 
     <h2 style={{fontSize: '30px'}} className="modalTokenHeaderAdap text-xl text-center text-white pl-[40px] pr-[40px]">

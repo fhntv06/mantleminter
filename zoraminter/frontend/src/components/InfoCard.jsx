@@ -163,12 +163,12 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
 
   return (
     <div className="glass-card rounded-3xl p-6 relative">
-      <h2 className="text-[1.35rem] mb-4">This is an open source tool</h2>
+      <h2 className="text-4xl mb-4 font-semibold">This is an open source tool</h2>
       <div className="h-[1px] w-full bg-white to-transparent mb-5"></div>
-      <p className="mb-6 text-[0.925rem] leading-relaxed">
+      <p className="mb-6 text-[0.925rem] leading-relaxed font-semibold">
         ERC20 Token is the fungible token standard for Zora Blockchain. This free educational tool allows you to deploy your own token to mainnet in one click. You will need at least 0.01 ETH for deployment fees.
       </p>
-      <p className="mb-6 text-[0.925rem] leading-relaxed">
+      <p className="mb-6 text-[0.925rem] leading-relaxed font-semibold">
         For each coin created you get 100 $ZOM points, as well as for each 10 created coins you get 10.000 $ZOM points, in the future these points will be converted into tokens and all active users will receive aidrop, below you can see your statistics:
       </p>
       <button
@@ -181,7 +181,7 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
         onClick={onOpenHelpModal}
         className="absolute bottom-4 right-4 text-[#666] hover:text-white transition-colors"
       >
-        <HelpCircle size={40} color="#fff" />
+        <HelpCircle size={40} color="#fff" strokeWidth={1} />
       </button>
     </div>
   );

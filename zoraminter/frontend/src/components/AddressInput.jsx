@@ -197,7 +197,7 @@ const AddressInput = forwardRef(({
                   onRemoveAddress(address);
                 }}
               >
-                <X size={16} />
+                <X size={24} color='#fff' strokeWidth={4} />
               </button>
             </div>
           ))}
