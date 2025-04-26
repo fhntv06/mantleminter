@@ -314,7 +314,7 @@ footer, header {
   position: relative;
   display: inline-block;
   margin-right: 4px;
-  z-index: 9999;
+  z-index: 99;
 }
 
 .warning-icon:hover .tooltip {
@@ -331,12 +331,6 @@ footer, header {
     max-width: 100% !important;
   }
 
-  .coin-container {
-    max-width: 290px !important;
-    height: 110px !important;
-    margin: 5px auto !important;
-  }
-
   .modalTokenHeaderAdap{
     font-size: 16px;
     line-height: 20px;
@@ -345,18 +339,6 @@ footer, header {
   .pulse{
     width: 80px;
     height: 80px;
-  }
-
-  .coin-container h3{
-    font-size: '17px !important'
-  }
-
-  .coins-frame{
-    height: 310px !important;
-  }
-
-  .coin-title{
-    height: 120px !important;
   }
 }
 

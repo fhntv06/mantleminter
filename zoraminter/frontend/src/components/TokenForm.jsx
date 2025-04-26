@@ -211,7 +211,7 @@ const TokenForm = ({
     }
   };
 
-  if (tokenAddress) {
+  if (true) {
     return (
       <>
         <RevokeModal
@@ -534,7 +534,7 @@ const TokenForm = ({
             <button
               onClick={account ? handleMintToken : connectWallet}
               disabled={loading}
-              className="ripple-button hover:bg-[#16023F] text-white px-4 sm:px-6 py-2 rounded-full flex items-center border-[1px] min-w-40 border-[#ffffff] gap-2 sm:gap-3 text-[0.825rem] sm:text-[0.925rem] transition-all duration-200"
+              className="ripple-button text-white px-4 sm:px-6 py-2 rounded-full flex items-center justify-center border min-w-40 border-white gap-2 sm:gap-3 text-[0.825rem] sm:text-[0.925rem] transition-all duration-200"
               onMouseDown={(e) => {
                 const button = e.currentTarget;
                 const ripple = document.createElement('span');
@@ -555,9 +555,7 @@ const TokenForm = ({
                 });
               }}
             >
-              <span className={account ? "inline" : "hidden xs:inline"}>
-                {loading ? "Processing..." : account ? "Deploy" : "Connect Wallet"}
-              </span>
+              {loading ? "Processing..." : account ? "Deploy" : "Connect Wallet"}
             </button>
           </div>
         </div>

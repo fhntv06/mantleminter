@@ -15,12 +15,12 @@ const ModalHeader = React.memo(({ onClose }) => (
   <>
     <button 
       onClick={onClose}
-      className="absolute right-4 top-4 hover:text-white"
+      className="absolute right-2 sm:right-4 top-4 hover:text-white"
     >
       <X size={24} color='#fff' strokeWidth={4} />
     </button>
 
-    <h2 style={{fontSize: '30px'}} className="modalTokenHeaderAdap text-xl text-center text-white pl-[40px] pr-[40px]">
+    <h2 className="modalTokenHeaderAdap text-xl sm:text-4xl text-center text-white px-5 sm:px-10">
         $ZOM are tokens of the Zora minter project, which in the future you will be able to mint on your wallet or spend on promotion in Zora memepad.
     </h2>
 
@@ -135,19 +135,11 @@ const MainModal = ({ isOpen, onClose, coins }) => {
         className="modalOverlay"
         />
         
-        <div className="relative z-10 py-6 px-8 sm:py-8 ">
+        <div className="relative z-10 py-3 sm:py-6 px-4 sm:px-8 ">
           <ModalHeader onClose={onClose} />
 
-          <div className="coin-title" style={{
-            width: '100%',
-            maxWidth: '385px',
-            margin: '0 auto 32px',
-            position: 'relative',
-            padding: '12px',
+          <div className="coin-title border border-white rounded-2xl p-3 relative mt-0 mx-auto mb-[32px] w-full max-w-[385px]" style={{
             fontFamily: 'Inria Sans, sans-serif',
-            background: 'transparent',
-            borderRadius: '16px',
-            border: 'solid 1px white',
           }}>
             <div style={{
               position: 'relative',

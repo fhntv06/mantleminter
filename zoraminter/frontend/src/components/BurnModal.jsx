@@ -84,12 +84,12 @@ const BurnModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress
 
   return (
     <div 
-      className="fixed inset-0 bg-[#1B024F] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[99] transition-opacity duration-600 ease-in-out"
+      className="fixed inset-0 bg-[#1B024F] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[999] transition-opacity duration-600 ease-in-out"
       style={{ opacity: isOpen ? 1 : 0 }}
       onClick={onClose}
     >
       <div 
-        className="relative w-[90%] max-w-[400px] bg-black rounded-[20px] p-6 transition-all duration-600 ease-in-out transform"
+        className="relative w-[90%] max-w-[400px] bg-[#0D0029] rounded-[20px] p-6 transition-all duration-600 ease-in-out transform"
         style={{ 
           opacity: isOpen ? 1 : 0,
           transform: isOpen ? 'scale(1)' : 'scale(0.95)'
@@ -98,7 +98,7 @@ const BurnModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress
       >
         <button 
           onClick={onClose}
-          className="absolute right-4 top-4 text-gray-400 hover:text-white"
+          className="absolute right-4 top-4 text-white hover:text-white"
         >
           <X size={24} color='#fff' strokeWidth={4} />
         </button>
@@ -112,13 +112,13 @@ const BurnModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress
           placeholder={`Enter ${tokenSymbol} amount`}
           value={amount}
           onChange={handleAmountChange}
-          className="w-full bg-[#111] placeholder-white border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem] mb-6"
+          className="w-full bg-[transparent] placeholder-white border border-white rounded-full py-2.75 px-4 text-[0.925rem] mb-16"
         />
 
         <div className="flex justify-center">
           <button
             onClick={handleBurn}
-            className="px-8 py-2 rounded-full bg-[#543926] hover:bg-[#5d3a22] text-white transition-colors"
+            className="px-8 py-2 rounded-full bg-[#1B024F] text-white transition-colors"
             disabled={loading || !account}
           >
             {loading ? "Processing..." : "Burn"}

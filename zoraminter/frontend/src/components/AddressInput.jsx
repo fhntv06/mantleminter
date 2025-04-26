@@ -161,7 +161,7 @@ const AddressInput = forwardRef(({
 
   return (
     <div className="relative mb-5.5" ref={addressInputRef}>
-      <Search style={{ top: '23px' }} className="absolute left-4 transform -translate-y-1/2 text-gray-400" size={19} />
+      <Search style={{ top: '23px' }} className="absolute left-4 transform -translate-y-1/2 text-white" size={19} />
       <input
         type="text"
         placeholder="Token address"
@@ -171,7 +171,7 @@ const AddressInput = forwardRef(({
         onKeyDown={handleKeyDown}
         onBlur={handleBlur}
         onFocus={() => setShowAddressHistory(true)}
-        className="w-full bg-[transparent] placeholder-white border border-[#fff] rounded-xl py-2.75 pl-11 pr-4 text-white placeholder-white text-[0.925rem]"
+        className="w-full bg-[transparent] placeholder-white border border-[#fff] rounded-xl py-2.75 pl-11 pr-4 text-white text-[0.925rem]"
       />
       <p className="text-[0.725rem] text-white mt-1.75 ml-4">
         Enter an existing token contract address.{' '}
@@ -181,11 +181,11 @@ const AddressInput = forwardRef(({
       </p>
 
       {showAddressHistory && addressHistory.length > 0 && (
-        <div className="absolute w-full bg-[#1A1A1A] border border-[#333] rounded-2xl top-[calc(100%-15px)] z-[999] overflow-hidden">
+        <div className="absolute w-full bg-[#16023F] border border-white rounded-2xl top-[calc(100%-15px)] z-[999] overflow-hidden">
           {addressHistory.map((address, index) => (
             <div
               key={index}
-              className="flex items-center px-4 py-2.5 cursor-pointer text-white text-[0.925rem] transition-colors hover:bg-[#333]"
+              className="flex items-center px-4 py-2.5 cursor-pointer text-white text-[0.925rem] transition-colors"
               onClick={() => handleHistoryClick(address)}
             >
               <RotateCcw size={16} className="mr-2" />

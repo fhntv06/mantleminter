@@ -25,7 +25,7 @@ const Notification = ({ notification, onClose }) => {
   return (
     <div 
       onClick={handleClose} 
-      className={`fixed bottom-8 left-8 text-white px-6 py-3 rounded-lg text-[0.925rem] z-[99999999] flex items-center gap-3 cursor-pointer transition-all duration-300 whitespace-nowrap ${
+      className={`fixed bg-[#16023F] bottom-8 left-8 text-white px-6 py-3 rounded-lg text-[0.925rem] z-[99999999] flex items-center gap-3 cursor-pointer transition-all duration-300 whitespace-nowrap ${
         isClosing ? 'opacity-0 translate-x-[-100%]' : ''
       } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-[-20px]'} border border-white`}
       style={{ 
