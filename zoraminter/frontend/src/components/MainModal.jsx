@@ -4,7 +4,7 @@ import btnCreateToken from '../../public/img/createTokenBtn.png';
 
 const ModalOverlay = React.memo(({ children, onClose }) => (
   <div 
-    className="modal fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-[999] modal-overlay tokenModalMam"
+    className="modal fixed inset-0 bg-[#1B024F] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[999] modal-overlay tokenModalMam"
     onClick={onClose}
   >
     {children}
@@ -15,16 +15,16 @@ const ModalHeader = React.memo(({ onClose }) => (
   <>
     <button 
       onClick={onClose}
-      className="absolute right-2 top-1 hover:text-white"
+      className="absolute right-4 top-4 hover:text-white"
     >
-      <X size={22} />
+      <X size={30} />
     </button>
 
-    <h2 style={{fontSize: '18px'}} className="modalTokenHeaderAdap text-xl text-center  text-white">
-      $MAM are tokens of the mantle minter project, which in the future you will be able to mint on your wallet or spend on promotion in mantle memepad.
+    <h2 style={{fontSize: '30px'}} className="modalTokenHeaderAdap text-xl text-center text-white pl-[40px] pr-[40px]">
+        $ZOM are tokens of the Zora minter project, which in the future you will be able to mint on your wallet or spend on promotion in Zora memepad.
     </h2>
 
-    <div className="flex justify-center mb-2">
+    <div className="flex justify-center mt-5 mb-5">
       <img 
         src="/img/modal-circle.png" 
         alt="Modal Circle" 
@@ -36,25 +36,25 @@ const ModalHeader = React.memo(({ onClose }) => (
 ));
 
 const SearchSection = React.memo(() => (
-  <div className="flex justify-center items-center gap-2 mb-5">
-    <div className="relative w-[180px]">
-      <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white" size={16} />
+  <div className="flex justify-center items-center gap-2 mb-4">
+    <div className="relative w-[120px]">
+      <Search className="absolute left-1 top-1/2 transform -translate-y-1/2 text-white" size={10} />
       <input
         type="text"
         placeholder="Search for token"
         disabled
-        className="w-full bg-transparent border border-white rounded-lg py-1.5 pl-9 pr-3 text-white cursor-not-allowed text-sm"
+        className="w-full bg-transparent border border-white rounded-lg py-1 px-4 text-white text-sm cursor-not-allowed text-[10px] placeholder-white"
       />
     </div>
-    <div className="border border-white text-white px-3 py-1.5 rounded-lg text-sm cursor-not-allowed bg-transparent">
+    <div className="border border-white text-white p-1 rounded-lg text-sm cursor-not-allowed bg-transparent">
       search
     </div>
   </div>
 ));
 
 const CoinDisplay = React.memo(({ coin, isTransitioning }) => (
-  <div style={{padding: '0 20px'}} className="relative z-10 flex justify-between items-center h-full coin-container overflow-visible">
-    <div>
+  <div className="relative z-10 flex justify-between items-center h-[124px] coin-container overflow-visible border border-white rounded-[15px]">
+    <div className='pt-[12px] pl-[12px] pb-[12px]'>
       <h3 
         style={{fontSize: '25px'}} 
         className={`text-white coin-transition ${isTransitioning ? 'coin-exit' : ''} sm:text-[25px] text-[17px]`}
@@ -62,7 +62,6 @@ const CoinDisplay = React.memo(({ coin, isTransitioning }) => (
         {coin.name}
       </h3>
       <p 
-        style={{marginBottom: '-7px'}}
         className={`text-white coin-transition ${isTransitioning ? 'coin-exit' : ''} sm:text-[19px] text-[14px]`}
       >
         created by {coin.creator}
@@ -77,8 +76,7 @@ const CoinDisplay = React.memo(({ coin, isTransitioning }) => (
     <img 
       src={coin.image}
       alt={coin.name}
-      className={`w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] rounded-xl object-cover coin-transition ${isTransitioning ? 'coin-exit' : ''}`}
-      style={{ border: '1px solid white' }}
+      className={`h-full rounded-xl object-cover coin-transition ${isTransitioning ? 'coin-exit' : ''} border-2`}
     />
   </div>
 ));
@@ -121,14 +119,9 @@ const MainModal = ({ isOpen, onClose, coins }) => {
         className="modal-body relative  max-h-[90vh] overflow-y-auto overflow-x-hidden"
         onClick={e => e.stopPropagation()}
         style={{
-          width: '90%',
-          maxWidth: '486px',
-          background: 'rgba(17, 17, 17, 0.1)',
-          backdropFilter: 'blur(20px)',
           borderRadius: '24px',
           position: 'relative',
           borderRadius: '26px',
-          background: 'rgba(0,0,0,0.1)',
           border: 'solid 1px white',
         }}
       >
@@ -142,39 +135,37 @@ const MainModal = ({ isOpen, onClose, coins }) => {
         className="modalOverlay"
         />
         
-        <div className="relative z-10 p-4 sm:p-6">
+        <div className="relative z-10 py-6 px-8 sm:py-8 ">
           <ModalHeader onClose={onClose} />
 
           <div className="coin-title" style={{
             width: '100%',
-            maxWidth: '346px',
-            height: '132px',
-            margin: '0 auto 16px',
+            maxWidth: '385px',
+            margin: '0 auto 32px',
             position: 'relative',
-            padding: '0',
+            padding: '12px',
             fontFamily: 'Inria Sans, sans-serif',
-            background: 'rgba(26, 26, 26, 0.8)',
+            background: 'transparent',
             borderRadius: '16px',
             border: 'solid 1px white',
           }}>
             <div style={{
               position: 'relative',
-              height: 'calc(100% - 10px)',
               overflow: 'hidden',
             }}>
               <div style={{
                 position: 'absolute',
                 inset: '-2px',
                 borderRadius: '18px',
-                background: 'rgba(0,0,0,0.1)',
-                padding: '1px',
+                  borderColor: '#fff',
+                padding: '12px',
                 zIndex: 0,
               }} />
               <CoinDisplay coin={currentCoin} isTransitioning={isTransitioning} />
             </div>
           </div>
 
-          <div className="tokenModalAdap relative rounded-3xl bg-[rgba(26,26,26,0.4)] p-5">
+          <div className="tokenModalAdap relative rounded-3xl pt-2 pb-4 px-10 m-auto">
             <div style={{
               position: 'absolute',
               inset: '-2px',
@@ -185,23 +176,14 @@ const MainModal = ({ isOpen, onClose, coins }) => {
             }} />
             
             <div className="coins-frame relative z-10 max-h-[350px] overflow-y-auto">
-              <div 
-                className="w-36 text-white py-1 rounded-full mb-6 cursor-not-allowed text-center"
-                style={{
-                  fontWeight: 'bold',
-                  margin: '0 auto 12px',
-                  background: 'transparent'
-                }}
-              >
-                <img 
-                  src={btnCreateToken}
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </div>
+            <img
+              src={btnCreateToken}
+              className="w-auto m-auto mb-4 h-[30px] object-cover rounded-xl"
+            />
 
               <SearchSection />
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-2.5 overflow-hidden">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-6 sm:gap-y-5 overflow-hidden">
                 {coins.map((coin, index) => (
                   <div key={index} className="flex flex-col items-center text-center coin-grid-item overflow-hidden">
                     <div className="w-[60px] h-[60px] sm:w-[63px] sm:h-[63px] mb-1 sm:mb-1.5 overflow-hidden">
@@ -212,9 +194,9 @@ const MainModal = ({ isOpen, onClose, coins }) => {
                         style={{ border: '1px solid white' }}
                       />
                     </div>
-                    <h4 className="text-white text-[11px] sm:text-[11px] font-medium">{coin.name}</h4>
-                    <p className="text-[9px] sm:text-[9px]">created by {coin.creator}</p>
-                    <p className="text-[9px] sm:text-[9px]">
+                    <h4 className="text-white text-[10px]">{coin.name}</h4>
+                    <p className="text-[10px]">created by {coin.creator}</p>
+                    <p className="text-[10px]">
                       <span className="">market cap: </span>
                       <span style={{ color: '#00FF0D' }}>{coin.marketCap}</span>
                     </p>

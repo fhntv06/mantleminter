@@ -173,8 +173,7 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
       </p>
       <button
         onClick={onOpenModal}
-        style={{ border: 'solid 3px #543926', margin: `${owner ? '100px' : '40px'} auto`, display: 'block' }}
-        className="rounded-full px-5 py-2.5 text-white text-[0.925rem] font-medium"
+        className='block rounded-full px-5 py-2.5 text-white text-[0.925rem] font-medium border-[2px] border-[#ffffff] mt-16 ml-auto mr-auto'
       >
         {score || 0}{" $MAM"}
       </button>
@@ -182,7 +181,7 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
         onClick={onOpenHelpModal}
         className="absolute bottom-4 right-4 text-[#666] hover:text-white transition-colors"
       >
-        <HelpCircle size={22} />
+        <HelpCircle size={40} color="#fff" />
       </button>
     </div>
   );

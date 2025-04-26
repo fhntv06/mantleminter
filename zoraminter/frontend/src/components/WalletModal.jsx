@@ -17,7 +17,6 @@ const WalletModal = ({ isOpen, onClose }) => {
           maxWidth: '500px',
           minHeight: '200px',
           background: 'rgba(17, 17, 17, 0.1)',
-          backdropFilter: 'blur(10px)',
           borderRadius: '24px',
           position: 'relative',
           border: 'solid white 1px',

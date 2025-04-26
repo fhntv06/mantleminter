@@ -268,39 +268,39 @@ const TokenForm = ({
 
         <div className="space-y-6">
           <div>
-            <label className="block text-gray-400 text-sm mb-2">Address</label>
+            <label className="block text-white text-sm mb-2">Address</label>
             <div className="relative">
               <input
                 type="text"
                 value={tokenAddress}
                 readOnly
-                className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem] pr-12"
+                className="w-full placeholder-white border bg-[transparent] border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem] pr-12"
               />
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   copyToClipboard(tokenAddress);
                 }}
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-white"
               >
                 <Copy size={18} />
               </button>
             </div>
-            <p className="text-gray-500 text-xs mt-1 ml-4">On-chain smart contract address of the token parent.</p>
+            <p className="text-white text-xs mt-1 ml-4">On-chain smart contract address of the token parent.</p>
           </div>
 
           <div>
-            <label className="block text-gray-400 text-sm mb-2">Admin</label>
+            <label className="block text-white text-sm mb-2">Admin</label>
             <div className="relative">
               <input
                 type="text"
                 value={owner ? `${owner.slice(0, owner.length / 2 - 3) + '...' + owner.slice(owner.length / 2 + 3)}` : ''}
                 readOnly
-                className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem]"
+                className="w-full placeholder-white border bg-[transparent] border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
               />
               {isOwner && (
               <button
-                className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-[#543926] hover:bg-[#5d3a22] text-white h-[36px] w-[124px] rounded-full text-sm"
+                className="absolute right-1 top-1/2 transform -translate-y-1/2 text-white h-[36px] w-[124px] rounded-full text-sm"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsRevokeModalOpen(true);
@@ -310,7 +310,7 @@ const TokenForm = ({
               </button>
               )}
             </div>
-            <p style={{color: 'rgba(197, 141, 0, 1)'}} className="text-gray-500 text-xs mt-1.5 ml-4 flex items-center">
+            <p style={{color: 'rgba(197, 141, 0, 1)'}} className="text-white text-xs mt-1.5 ml-4 flex items-center">
             {owner !== '0x0000000000000000000000000000000000000000' && <span className="warning-icon text-yellow-500 relative">
               ⚠
               
@@ -325,17 +325,17 @@ const TokenForm = ({
           </div>
 
           <div>
-            <label className="block text-gray-400 text-sm mb-2">Total Supply</label>
+            <label className="block text-white text-sm mb-2">Total Supply</label>
             <div className="relative">
               <input
                 type="text"
                 value={`${formatNumberWithCommas(totalSupply) ?? 'null'} ${tokenSymbol}`}
                 readOnly
-                className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 pl-4 pr-[80px] text-[0.925rem]"
+                className="w-full placeholder-white border bg-[transparent] border-[#fff] rounded-full py-2.75 pl-4 pr-[80px] text-[0.925rem]"
               />
               {isOwner && (
               <button
-                className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-[#543926] hover:bg-[#5d3a22] text-white h-[36px] w-[70px] rounded-full text-sm"
+                className="absolute right-1 top-1/2 transform -translate-y-1/2 text-white h-[36px] w-[70px] rounded-full text-sm"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsMintModalOpen(true);
@@ -345,7 +345,7 @@ const TokenForm = ({
               </button>
               )}
             </div>
-            <p style={{color: 'rgba(197, 141, 0, 1)'}} className="text-gray-500 text-xs mt-1.5 ml-4 flex items-center">
+            <p style={{color: 'rgba(197, 141, 0, 1)'}} className="text-white text-xs mt-1.5 ml-4 flex items-center">
             {owner !== '0x0000000000000000000000000000000000000000' && <span className="warning-icon text-yellow-500 relative">
               ⚠
              
@@ -357,17 +357,17 @@ const TokenForm = ({
           </div>
 
           <div>
-            <label className="block text-gray-400 text-sm mb-2">Wallet balance</label>
+            <label className="block text-white text-sm mb-2">Wallet balance</label>
             <div className="relative">
               <input
                 type="text"
                 value={balance ? `${formatNumberWithCommas(totalSupply) ?? 'null'} ${tokenSymbol}` : 'empty balance'}
                 readOnly
-                className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 pl-4 pr-[80px] text-[0.925rem]"
+                className="w-full placeholder-white border bg-[transparent] border-[#fff] rounded-full py-2.75 pl-4 pr-[80px] text-[0.925rem]"
               />
               {isOwner && (
               <button
-                className="absolute right-1 top-1/2 transform -translate-y-1/2 bg-[#543926] hover:bg-[#5d3a22] text-white h-[36px] w-[70px] rounded-full text-sm"
+                className="absolute right-1 top-1/2 transform -translate-y-1/2 text-white h-[36px] w-[70px] rounded-full text-sm"
                 onClick={(e) => {
                   e.stopPropagation();
                   setIsBurnModalOpen(true);
@@ -377,7 +377,7 @@ const TokenForm = ({
               </button>
               )}
             </div>
-            <p className="text-gray-500 text-xs mt-1 ml-4">
+            <p className="text-white text-xs mt-1 ml-4">
               Number of tokens in connected wallet.
             </p>
           </div>
@@ -410,7 +410,7 @@ const TokenForm = ({
                   setNotification({ message: 'Failed to add token to wallet', color: '#FF4444' });
                 }
               }}
-              className="bg-[#543926] hover:bg-[#5d3a22] text-white px-6 py-2 rounded-full text-[0.925rem] transition-colors"
+              className="border border-[#fff] text-white px-6 py-2 rounded-full text-[0.925rem] transition-colors"
             >
               Add token to wallet
             </button>
@@ -460,9 +460,9 @@ const TokenForm = ({
               placeholder="Token Name"
               value={tokenName}
               onChange={(e) => setTokenName(e.target.value.slice(0, 12))}
-              className="w-full bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
+              className="w-full placeholder-white border bg-[transparent] border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
             />
-            <p className="text-[0.725rem] text-gray-400 mt-1.75 ml-4">
+            <p className="text-[0.725rem] text-white mt-1.75 ml-4">
               Your project unabbreviated name with spaces (usually 1-3 words).{' '}
               <button onClick={() => setTokenName('MantleMinter')} className="font-bold hover:text-white">
                 Use example
@@ -476,9 +476,9 @@ const TokenForm = ({
               placeholder="Token Symbol"
               value={tokenSymbol}
               onChange={(e) => setTokenSymbol(e.target.value.slice(0, 5))}
-              className="w-full bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
+              className="w-full placeholder-white border bg-[transparent] border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
             />
-            <p className="text-[0.725rem] text-gray-400 mt-1.75 ml-4">
+            <p className="text-[0.725rem] text-white mt-1.75 ml-4">
               Currency symbol appearing in balance (usually 3-5 uppercase chars).{' '}
               <button onClick={() => setTokenSymbol('MAM')} className="font-bold hover:text-white">
                 Use example
@@ -486,7 +486,7 @@ const TokenForm = ({
             </p>
           </div>
           <input
-            className="w-full bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem] mt-5"
+            className="w-full placeholder-white bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem] mt-5"
             placeholder="Decimal"
             type="number"
             max="18"
@@ -502,7 +502,7 @@ const TokenForm = ({
               }
             }}
           />
-          <p className="text-[0.725rem] text-gray-400 ml-4">
+          <p className="text-[0.725rem] text-white ml-4">
             The decimal precision of your token (18 is Mantle default).{' '}
             <button onClick={() => setDecimals(18)} className="font-bold hover:text-white">
               Use example
@@ -519,10 +519,10 @@ const TokenForm = ({
               const rawValue = e.target.value.replace(/\D/g, '');
               setTokensToMint(Math.min(5000000000, rawValue));
             }}
-            className="w-full bg-[transparent] border border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
+            className="w-full border placeholder-white bg-[transparent] border-[#fff] rounded-full py-2.75 px-4 text-[0.925rem]"
           />
 
-            <p className="text-[0.725rem] text-gray-400 mt-1.75 ml-4">
+            <p className="text-[0.725rem] text-white mt-1.75 ml-4">
               Number of initial tokens to mint and send to your wallet address (float).{' '}
               <button onClick={() => setTokensToMint('1000000')} className="font-bold hover:text-white">
                 Use example

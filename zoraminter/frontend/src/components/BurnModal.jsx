@@ -112,7 +112,7 @@ const BurnModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress
           placeholder={`Enter ${tokenSymbol} amount`}
           value={amount}
           onChange={handleAmountChange}
-          className="w-full bg-[#111] border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem] mb-6"
+          className="w-full bg-[#111] placeholder-white border border-[#333] rounded-full py-2.75 px-4 text-[0.925rem] mb-6"
         />
 
         <div className="flex justify-center">

@@ -18,7 +18,6 @@ const HelpModal = ({ isOpen, onClose }) => {
           maxWidth: '500px',
           minHeight: '250px',
           background: 'rgba(17, 17, 17, 0.1)',
-          backdropFilter: 'blur(20px)',
           borderRadius: '24px',
           position: 'relative',
         }}
