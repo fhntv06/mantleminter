@@ -45,6 +45,63 @@ html, body {
   pointer-events: none;
 }
 
+.background-element-pulse {
+  position: fixed;
+  top: -10%;
+  right: 0;
+  width: 1100px;
+  height: 1100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
+.background-element-pulse-img {
+  position: absolute;
+  top: 0;
+  right: -35%;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: pulseBgImg 5s ease-in-out infinite;
+}
+.background-element-pulse-small {
+  height: 800px;
+  width: 800px;
+  background-image: url(/bg-animate/bg-small-ellipse.png);
+  animation-delay: .5s;
+}
+.background-element-pulse-medium {
+  height: 950px;
+  width: 950px;
+  background-image: url(/bg-animate/bg-medium-ellipse.png);
+  animation-delay: 1s;
+}
+.background-element-pulse-big {
+  height: 100%;
+  width: 100%;
+  background-image: url(/bg-animate/bg-big-ellipse.png);
+  animation-delay: 1.5s;
+}
+@keyframes pulseBgImg {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 1200px) {
+ .background-element-pulse {
+   top: -15%;
+   right: -20%;
+   transform: scale(.8);
+ }
+}
 @keyframes slow-rotate {
   from {
     transform: rotate(0deg);
@@ -340,6 +397,11 @@ footer, header {
     width: 80px;
     height: 80px;
   }
+  .background-element-pulse {
+    top: -15%;
+    right: -40%;
+    transform: scale(0.7);
+  }
 }
 
 .modal-body::-webkit-scrollbar {
@@ -356,4 +418,18 @@ footer, header {
 
 .modal-body {
   width: 100%!important;
+}
+@media (max-width: 576px) {
+  .background-element-pulse {
+    top: -25%;
+    right: -100%;
+    transform: scale(.7);
+  }
+}
+@media (max-width: 390px) {
+  .background-element-pulse {
+    top: -25%;
+    right: -100%;
+    transform: scale(.7);
+  }
 }

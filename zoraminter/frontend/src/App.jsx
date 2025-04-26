@@ -239,110 +239,115 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#1B024F]">
-      <div className="background-element" />
-      <div className="fixed bottom-0 left-0 z-[999]">
-        {(notification.message || localNotification.message) && (
-          <Notification
-            notification={notification.message ? notification : localNotification}
-            onClose={() => {
-              setNotification({ message: null, color: '#C58D00' });
-              setLocalNotification({ message: null, color: '#C58D00' });
-            }}
-          />
-        )}
-      </div>
-      
-      <WalletModal
-        isOpen={isWalletModalOpen}
-        onClose={() => setIsWalletModalOpen(false)}
-      />
-      
-      <HelpModal
-        isOpen={isHelpModalOpen}
-        onClose={() => setIsHelpModalOpen(false)}
-      />
-      
-      <MainModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        coins={coins}
-      />
-
-      <Header
-        onOpenModal={() => setIsModalOpen(true)}
-        addressInputRef={addressInputRef}
-        tokenAddress={tokenAddress}
-        setTokenAddress={setTokenAddress}
-        tokenSymbol={tokenSymbol}
-        setTokenSymbol={setTokenSymbol}
-        owner={owner}
-        setOwner={setOwner}
-        totalSupply={totalSupply}
-        setTotalSupply={setTotalSupply}
-        balance={balance}
-        setBalance={setBalance}
-        showAddressHistory={showAddressHistory}
-        setShowAddressHistory={setShowAddressHistory}
-        addressHistory={addressHistory}
-        handleAddressSelect={handleAddressSelect}
-        onAddressSubmit={handleAddressSubmit}
-        onRemoveAddress={handleRemoveAddress}
-        account={account}
-        localNotification={localNotification}
-        setLocalNotification={setLocalNotification}
-        setNotification={setNotification}
-        setAccount={setAccount}
-        connectWallet={connectWallet}
-        disconnectWallet={disconnectWallet}
-        setTokenName={setTokenName}
-        setTokensToMint={setTokensToMint}
-      />
-
-      <main className="flex-grow py-2.5 z-10">
-        <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5">
-          
-          <div className='flex flex-col max-w-[350px]'>
-            <h1 className="text-2xl sm:text-[2rem] mt-6 sm:mt-10 mb-4 sm:mb-5.5">Mint your token</h1>
-            <div className="h-[2px] w-full bg-gradient-to-r from-white to-transparent mb-5"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-6 sm:gap-10 lg:gap-20 mb-10 sm:mb-20">
-            <TokenForm
-              tokenName={tokenName}
-              setTokenName={setTokenName}
-              tokenSymbol={tokenSymbol}
-              setTokenSymbol={setTokenSymbol}
-              tokensToMint={tokensToMint}
-              setTokensToMint={setTokensToMint}
-              setNotification={setNotification}
-              owner={owner}
-              account={account}
-              onConnectWallet={() => setIsWalletModalOpen(true)}
-              balance={balance}
-              totalSupply={totalSupply}
-              tokenAddress={tokenAddress}
-              setTokenAddress={setTokenAddress}
-              setIsWalletModalOpen={setIsWalletModalOpen}
-              connectWallet={connectWallet}
-              setOwner={setOwner}
-              setTotalSupply={setTotalSupply}
-              setBalance={setBalance}
-              fetchTokenData={fetchTokenData}
-            />
-
-            <InfoCard
-              onOpenModal={() => setIsModalOpen(true)}
-              onOpenHelpModal={() => setIsHelpModalOpen(true)}
-              userAddress={owner}
-            />
-          </div>
+      <div className="min-h-screen flex flex-col bg-[#1B024F]">
+        {/*<div className="background-element"/>*/}
+        <div className="background-element-pulse">
+          <span className='background-element-pulse-img background-element-pulse-small'></span>
+          <span className='background-element-pulse-img background-element-pulse-medium'></span>
+          <span className='background-element-pulse-img background-element-pulse-big'></span>
         </div>
-      </main>
+        <div className="fixed bottom-0 left-0 z-[999]">
+          {(notification.message || localNotification.message) && (
+              <Notification
+                  notification={notification.message ? notification : localNotification}
+                  onClose={() => {
+                    setNotification({message: null, color: '#C58D00'});
+                    setLocalNotification({message: null, color: '#C58D00'});
+                  }}
+              />
+          )}
+        </div>
 
-     
-      <Footer />
-    </div>
+        <WalletModal
+            isOpen={isWalletModalOpen}
+            onClose={() => setIsWalletModalOpen(false)}
+        />
+
+        <HelpModal
+            isOpen={isHelpModalOpen}
+            onClose={() => setIsHelpModalOpen(false)}
+        />
+
+        <MainModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            coins={coins}
+        />
+
+        <Header
+            onOpenModal={() => setIsModalOpen(true)}
+            addressInputRef={addressInputRef}
+            tokenAddress={tokenAddress}
+            setTokenAddress={setTokenAddress}
+            tokenSymbol={tokenSymbol}
+            setTokenSymbol={setTokenSymbol}
+            owner={owner}
+            setOwner={setOwner}
+            totalSupply={totalSupply}
+            setTotalSupply={setTotalSupply}
+            balance={balance}
+            setBalance={setBalance}
+            showAddressHistory={showAddressHistory}
+            setShowAddressHistory={setShowAddressHistory}
+            addressHistory={addressHistory}
+            handleAddressSelect={handleAddressSelect}
+            onAddressSubmit={handleAddressSubmit}
+            onRemoveAddress={handleRemoveAddress}
+            account={account}
+            localNotification={localNotification}
+            setLocalNotification={setLocalNotification}
+            setNotification={setNotification}
+            setAccount={setAccount}
+            connectWallet={connectWallet}
+            disconnectWallet={disconnectWallet}
+            setTokenName={setTokenName}
+            setTokensToMint={setTokensToMint}
+        />
+
+        <main className="flex-grow py-2.5 z-10">
+          <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5">
+
+            <div className='flex flex-col max-w-[350px]'>
+              <h1 className="text-2xl sm:text-[2rem] mt-6 sm:mt-10 mb-4 sm:mb-5.5">Mint your token</h1>
+              <div className="h-[2px] w-full bg-gradient-to-r from-white to-transparent mb-5"></div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-6 sm:gap-10 lg:gap-20 mb-10 sm:mb-20">
+              <TokenForm
+                  tokenName={tokenName}
+                  setTokenName={setTokenName}
+                  tokenSymbol={tokenSymbol}
+                  setTokenSymbol={setTokenSymbol}
+                  tokensToMint={tokensToMint}
+                  setTokensToMint={setTokensToMint}
+                  setNotification={setNotification}
+                  owner={owner}
+                  account={account}
+                  onConnectWallet={() => setIsWalletModalOpen(true)}
+                  balance={balance}
+                  totalSupply={totalSupply}
+                  tokenAddress={tokenAddress}
+                  setTokenAddress={setTokenAddress}
+                  setIsWalletModalOpen={setIsWalletModalOpen}
+                  connectWallet={connectWallet}
+                  setOwner={setOwner}
+                  setTotalSupply={setTotalSupply}
+                  setBalance={setBalance}
+                  fetchTokenData={fetchTokenData}
+              />
+
+              <InfoCard
+                  onOpenModal={() => setIsModalOpen(true)}
+                  onOpenHelpModal={() => setIsHelpModalOpen(true)}
+                  userAddress={owner}
+              />
+            </div>
+          </div>
+        </main>
+
+
+        <Footer/>
+      </div>
   );
 }
 
