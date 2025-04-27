@@ -239,7 +239,7 @@ function App() {
   };
 
   return (
-      <div className="min-h-screen flex flex-col bg-[#1B024F]">
+      <div className="min-h-screen flex flex-col bg-[#021424]">
         {/*<div className="background-element"/>*/}
         <div className="background-element-pulse">
           <span className='background-element-pulse-img background-element-pulse-small'></span>
@@ -304,12 +304,11 @@ function App() {
             setTokensToMint={setTokensToMint}
         />
 
-        <main className="flex-grow py-2.5 z-10">
+        <main className="flex-grow z-10 mb-32">
           <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5">
 
-            <div className='flex flex-col max-w-[350px]'>
-              <h1 className="text-2xl sm:text-[2rem] mt-6 sm:mt-10 mb-4 sm:mb-5.5">Mint your token</h1>
-              <div className="h-[2px] w-full bg-gradient-to-r from-white to-transparent mb-5"></div>
+            <div className='flex flex-col max-w-[350px] mb-11'>
+              <h1 className="text-2xl sm:text-4xl mt-6 sm:mt-10 font-semibold">Mint your token</h1>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-6 sm:gap-10 lg:gap-20 mb-10 sm:mb-20">

@@ -164,16 +164,16 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
   return (
     <div className="glass-card rounded-3xl p-6 relative">
       <h2 className="text-4xl mb-4 font-semibold">This is an open source tool</h2>
-      <div className="h-[1px] w-full bg-white to-transparent mb-5"></div>
-      <p className="mb-6 text-[0.925rem] leading-relaxed font-semibold">
-        ERC20 Token is the fungible token standard for Zora Blockchain. This free educational tool allows you to deploy your own token to mainnet in one click. You will need at least 0.01 ETH for deployment fees.
+      <div className="h-[1px] w-full bg-gradient-to-r from-white to-transparent mb-5"></div>
+      <p className="mb-6 text-xl">
+        ERC20 Token is the fungible token standard for Cronos Blockchain. This free educational tool allows you to deploy your own token to mainnet in one click. You will need at least 0.01 CRO for deployment fees.
       </p>
-      <p className="mb-6 text-[0.925rem] leading-relaxed font-semibold">
-        For each coin created you get 100 $ZOM points, as well as for each 10 created coins you get 10.000 $ZOM points, in the future these points will be converted into tokens and all active users will receive aidrop, below you can see your statistics:
+      <p className="mb-6 text-xl">
+        For each coin created you get <b>100 $COM</b> points, as well as for each 10 created coins you get <b>10.000 $COM</b> points, in the future these points will be converted into tokens and all active users will receive aidrop, below you can see your statistics:
       </p>
       <button
         onClick={onOpenModal}
-        className='block rounded-full px-5 py-2.5 text-white text-[0.925rem] font-medium border-[2px] border-[#ffffff] mt-16 ml-auto mr-auto'
+        className='block rounded-full px-5 py-2.5 text-white text-xl border-[2px] border-[#ffffff] mt-16 ml-auto mr-auto'
       >
         {score || 0}{" $MAM"}
       </button>

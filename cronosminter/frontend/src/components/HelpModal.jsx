@@ -15,7 +15,7 @@ const HelpModal = ({ isOpen, onClose }) => {
         className="modal-content"
         style={{
           width: '90%',
-          maxWidth: '500px',
+          maxWidth: '620px',
           minHeight: '250px',
           background: 'rgba(17, 17, 17, 0.1)',
           borderRadius: '24px',
@@ -27,7 +27,7 @@ const HelpModal = ({ isOpen, onClose }) => {
           inset: '-2px',
           borderRadius: '24px',
           background: 'rgba(0,0,0,0.1)',
-          border: 'solid 1px white',
+          border: 'solid 1px #EFEFEF',
           padding: '1px',
           zIndex: 0,
         }} />
@@ -35,15 +35,15 @@ const HelpModal = ({ isOpen, onClose }) => {
         <div className="relative z-10 p-6 sm:p-8 md:p-12 flex flex-col items-center justify-center h-full">
           <button
             onClick={onClose}
-            className="absolute right-4 top-4 text-gray-400 hover:text-white"
+            className="absolute right-4 top-4"
           >
             <X size={24} color='#fff' strokeWidth={4} />
           </button>
 
-          <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 text-white">
+          <h2 className="text-lg sm:text-xl md:text-3xl text-center mb-6 sm:mb-8 text-white">
             After 100.000 created coins in<br />
             our service, we'll release a<br />
-            mempad on the mantle.
+            mempad on the cronos.
           </h2>
 
           <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 border-white flex items-center justify-center">

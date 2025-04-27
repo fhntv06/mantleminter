@@ -74,21 +74,21 @@ const Header = ({
 
 
   return (
-    <header className="w-full bg-[#16023F] rounded-bl-[25px] sm:rounded-bl-[50px] rounded-br-[25px] sm:rounded-br-[50px] relative z-20">
+    <header className="w-full bg-[#090D16] rounded-bl-[25px] sm:rounded-bl-[50px] rounded-br-[25px] sm:rounded-br-[50px] relative z-20 border border-[#2B2B2B]">
       <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5 py-3 sm:py-4 flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer">
           <a onClick={handleClearAddress}>
-            <img src="/img/logo.png" alt="Mantle Logo" className="h-5 sm:h-10" />
+            <img src="/img/logo.png" alt="Mantle Logo" className="h-10 sm:h-[72px]" />
           </a>
         </div>
         
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-10">
           <button
             ref={buttonRef}
             className="relative border min-w-25 sm:min-w-40 border-white hover:bg-[#16023F] text-white px-2 sm:px-3 py-1.5 rounded-full flex items-center gap-1 sm:gap-2 text-[0.75rem] sm:text-[0.825rem]"
             onClick={handleWalletClick}
           >
-            <div className="flex items-center justify-center gap-2 w-full">
+            <div className="flex items-center justify-center gap-2 w-full text-[18px]">
               {account ? account.slice(0, 6) + '...' + account.slice(-4) : "Connect Wallet"}
               {account && <img src="/img/pepe.png" alt="pepe" className="w-4 h-4" />}
             </div>
@@ -103,7 +103,7 @@ const Header = ({
             )}
           </button>
           <button onClick={onOpenModal}>
-            <img className="w-10 sm:w-[50px]" src="/img/pepe.png" alt="Pepe" />
+            <img className="w-10 sm:w-[72px]" src="/img/pepe.png" alt="Pepe" />
           </button>
         </div>
       </div>

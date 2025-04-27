@@ -11,7 +11,7 @@ const WalletModal = ({ isOpen, onClose }) => {
     >
       <div
         onClick={e => e.stopPropagation()}
-        className="modal-content px-20 py-4 bg-[#0D0029]"
+        className="modal-content px-20 py-4 bg-[#03101C]"
         style={{
           borderRadius: '24px',
           position: 'relative',
@@ -26,7 +26,7 @@ const WalletModal = ({ isOpen, onClose }) => {
           </button> */}
 
           <img
-            src="/img/loader.png"
+            src="/logo.png"
             alt="Confirm Transaction"
             className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
           />

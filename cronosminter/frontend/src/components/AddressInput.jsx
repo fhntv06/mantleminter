@@ -161,7 +161,7 @@ const AddressInput = forwardRef(({
 
   return (
     <div className="relative mb-5.5" ref={addressInputRef}>
-      <Search style={{ top: '23px' }} className="absolute left-4 transform -translate-y-1/2 text-white" size={19} />
+      <Search className="absolute top-6 left-4 transform -translate-y-1/2 text-white" size={20} strokeWidth={3} />
       <input
         type="text"
         placeholder="Token address"
@@ -171,9 +171,9 @@ const AddressInput = forwardRef(({
         onKeyDown={handleKeyDown}
         onBlur={handleBlur}
         onFocus={() => setShowAddressHistory(true)}
-        className="w-full bg-[transparent] placeholder-white border border-[#fff] rounded-xl py-2.75 pl-11 pr-4 text-white text-[0.925rem]"
+        className="w-full bg-[#545454] placeholder-white border-2 border-white rounded-full py-2 pl-11 pr-4 text-white text-lg"
       />
-      <p className="text-[0.725rem] text-white mt-1.75 ml-4">
+      <p className="text-[0.725rem] text-[#909090] mt-1 ml-8">
         Enter an existing token contract address.{' '}
         <button onClick={() => setTokenAddress(EXAMPLE_ADDRESS)} className="font-bold hover:text-white">
           Use example
@@ -181,7 +181,7 @@ const AddressInput = forwardRef(({
       </p>
 
       {showAddressHistory && addressHistory.length > 0 && (
-        <div className="absolute w-full bg-[#16023F] border border-white rounded-2xl top-[calc(100%-15px)] z-[999] overflow-hidden">
+        <div className="absolute w-full bg-[#545454] border border-white rounded-2xl top-[calc(100%-15px)] z-[999] overflow-hidden">
           {addressHistory.map((address, index) => (
             <div
               key={index}
