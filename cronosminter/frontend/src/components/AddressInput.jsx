@@ -181,7 +181,7 @@ const AddressInput = forwardRef(({
       </p>
 
       {showAddressHistory && addressHistory.length > 0 && (
-        <div className="absolute w-full bg-[#545454] border border-white rounded-2xl top-[calc(100%-15px)] z-[999] overflow-hidden">
+        <div className="absolute w-full bg-[#545454] hover:bg-[#090D16] border border-white rounded-2xl top-[calc(100%-15px)] z-[999] overflow-hidden">
           {addressHistory.map((address, index) => (
             <div
               key={index}

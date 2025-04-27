@@ -163,12 +163,12 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
 
   return (
     <div className="glass-card rounded-3xl p-6 relative">
-      <h2 className="text-4xl mb-4 font-semibold">This is an open source tool</h2>
+      <h2 className="text-2xl sm:text-4xl mb-4 font-semibold">This is an open source tool</h2>
       <div className="h-[1px] w-full bg-gradient-to-r from-white to-transparent mb-5"></div>
-      <p className="mb-6 text-xl">
+      <p className="mb-6 text-base sm:text-xl">
         ERC20 Token is the fungible token standard for Cronos Blockchain. This free educational tool allows you to deploy your own token to mainnet in one click. You will need at least 0.01 CRO for deployment fees.
       </p>
-      <p className="mb-6 text-xl">
+      <p className="mb-6 text-base sm:text-xl">
         For each coin created you get <b>100 $COM</b> points, as well as for each 10 created coins you get <b>10.000 $COM</b> points, in the future these points will be converted into tokens and all active users will receive aidrop, below you can see your statistics:
       </p>
       <button
