@@ -15,7 +15,7 @@ const HelpModal = ({ isOpen, onClose }) => {
         className="modal-content"
         style={{
           width: '90%',
-          maxWidth: '500px',
+          maxWidth: '620px',
           minHeight: '250px',
           background: 'rgba(17, 17, 17, 0.1)',
           borderRadius: '24px',

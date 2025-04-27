@@ -82,13 +82,13 @@ const Header = ({
           </a>
         </div>
         
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-10">
           <button
             ref={buttonRef}
             className="relative border min-w-25 sm:min-w-40 border-white hover:bg-[#16023F] text-white px-2 sm:px-3 py-1.5 rounded-full flex items-center gap-1 sm:gap-2 text-[0.75rem] sm:text-[0.825rem]"
             onClick={handleWalletClick}
           >
-            <div className="flex items-center justify-center gap-2 w-full">
+            <div className="flex items-center justify-center gap-2 w-full text-[18px]">
               {account ? account.slice(0, 6) + '...' + account.slice(-4) : "Connect Wallet"}
               {account && <img src="/img/pepe.png" alt="pepe" className="w-4 h-4" />}
             </div>
@@ -103,7 +103,7 @@ const Header = ({
             )}
           </button>
           <button onClick={onOpenModal}>
-            <img className="w-10 sm:w-[50px]" src="/img/pepe.png" alt="Pepe" />
+            <img className="w-10 sm:w-[72px]" src="/img/pepe.png" alt="Pepe" />
           </button>
         </div>
       </div>

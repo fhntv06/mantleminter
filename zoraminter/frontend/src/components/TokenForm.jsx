@@ -211,7 +211,7 @@ const TokenForm = ({
     }
   };
 
-  if (true) {
+  if (tokenAddress) {
     return (
       <>
         <RevokeModal
@@ -410,7 +410,7 @@ const TokenForm = ({
                   setNotification({ message: 'Failed to add token to wallet', color: '#FF4444' });
                 }
               }}
-              className="border border-[#fff] text-white px-6 py-2 rounded-full text-[0.925rem] transition-colors"
+              className="border border-[#fff] text-white px-6 py-2 rounded-full text-[18px] transition-colors"
             >
               Add token to wallet
             </button>
@@ -503,7 +503,7 @@ const TokenForm = ({
             }}
           />
           <p className="text-[0.725rem] text-white ml-4">
-            The decimal precision of your token (18 is Mantle default).{' '}
+            The decimal precision of your token (18 is Zora default).{' '}
             <button onClick={() => setDecimals(18)} className="font-bold hover:text-white">
               Use example
             </button>
@@ -534,7 +534,7 @@ const TokenForm = ({
             <button
               onClick={account ? handleMintToken : connectWallet}
               disabled={loading}
-              className="ripple-button text-white px-4 sm:px-6 py-2 rounded-full flex items-center justify-center border min-w-40 border-white gap-2 sm:gap-3 text-[0.825rem] sm:text-[0.925rem] transition-all duration-200"
+              className="ripple-button text-white px-4 sm:px-6 py-2 rounded-full flex items-center justify-center border min-w-40 border-white gap-2 sm:gap-3 text-[0.825rem] sm:text-[18px] transition-all duration-200"
               onMouseDown={(e) => {
                 const button = e.currentTarget;
                 const ripple = document.createElement('span');

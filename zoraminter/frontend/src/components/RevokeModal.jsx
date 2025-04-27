@@ -72,7 +72,7 @@ const RevokeModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddre
           <X size={24} color='#fff' strokeWidth={4} />
         </button>
 
-        <h2 className="text-2xl font-bold text-white mb-4">
+        <h2 className="text-2xl font-bold text-white mb-4 text-center">
           Revoke Ownership
         </h2>
 

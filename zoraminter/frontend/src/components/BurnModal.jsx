@@ -103,7 +103,7 @@ const BurnModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress
           <X size={24} color='#fff' strokeWidth={4} />
         </button>
 
-        <h2 className="text-2xl font-bold text-white mb-6">
+        <h2 className="text-2xl font-bold text-white mb-6 text-center">
           Burn {tokenSymbol}
         </h2>
 
