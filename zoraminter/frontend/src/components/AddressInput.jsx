@@ -161,7 +161,7 @@ const AddressInput = forwardRef(({
 
   return (
     <div className="relative mb-5.5" ref={addressInputRef}>
-      <Search className="absolute top-6 left-4 transform -translate-y-1/2 text-white" size={20} strokeWidth={3} />
+      <Search className="absolute top-5 left-4 transform -translate-y-1/2 text-white" size={20} strokeWidth={3} />
       <input
         type="text"
         placeholder="Token address"

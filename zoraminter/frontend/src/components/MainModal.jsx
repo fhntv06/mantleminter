@@ -36,14 +36,14 @@ const ModalHeader = React.memo(({ onClose }) => (
 ));
 
 const SearchSection = React.memo(() => (
-  <div className="flex justify-center items-center gap-2 mb-4">
-    <div className="relative w-[120px]">
+  <div className="flex justify-center items-center mb-4">
+    <div className="relative">
       <Search className="absolute left-1 top-1/2 transform -translate-y-1/2 text-white" size={10} />
       <input
         type="text"
         placeholder="Search for token"
         disabled
-        className="w-full bg-transparent border border-white rounded-lg py-1 px-4 text-white text-sm cursor-not-allowed text-[10px] placeholder-white"
+        className="w-full h-[30px] bg-transparent border border-white rounded-lg py-1 pl-4 pr-2 text-white cursor-not-allowed text-[12px] placeholder-white max-w-[130px]"
       />
     </div>
     <div className="border border-white text-white p-1 rounded-lg text-sm cursor-not-allowed bg-transparent">
