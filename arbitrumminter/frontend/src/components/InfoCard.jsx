@@ -166,16 +166,16 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
       <h2 className="text-2xl sm:text-4xl mb-4 font-normal">This is an open source tool</h2>
       <div className="h-[1px] w-full bg-white to-transparent mb-5"></div>
       <p className="mb-6 text-base sm:text-xl font-normal">
-        ERC20 Token is the fungible token standard for Zora Blockchain. This free educational tool allows you to deploy your own token to mainnet in one click. You will need at least 0.01 ETH for deployment fees.
+        ERC20 Token is the fungible token standard for Arbitrum Blockchain. This free educational tool allows you to deploy your own token to mainnet in one click. You will need at least 0.001 ETH for deployment fees.
       </p>
       <p className="mb-6 text-base sm:text-xl font-normal">
-        For each coin created you get 100 $ZOM points, as well as for each 10 created coins you get 10.000 $ZOM points, in the future these points will be converted into tokens and all active users will receive airdrop, below you can see your statistics:
+        For each coin created you get <b>100 $ARM</b> points, as well as for each 10 created coins you get <b>10.000 $ARM</b> points, in the future these points will be converted into tokens and all active users will receive aidrop, below you can see your statistics:
       </p>
       <button
         onClick={onOpenModal}
-        className='block rounded-full px-5 py-2.5 text-white text-xl border-[2px] border-[#ffffff] mt-16 ml-auto mr-auto'
+        className='block rounded-full px-5 py-2.5 text-white text-xl border-[2px] border-[#12AAFF] hover:bg-[#12AAFF] mt-16 ml-auto mr-auto'
       >
-        {score || 0}{" $ZOM"}
+        {score || 0}{" $ARM"}
       </button>
       <button
         onClick={onOpenHelpModal}

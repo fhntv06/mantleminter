@@ -6,12 +6,12 @@ const WalletModal = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-[#1B024F] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[9999] modal-overlay"
+      className="fixed inset-0 bg-[#0A1D27] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[9999] modal-overlay"
       onClick={onClose}
     >
       <div
         onClick={e => e.stopPropagation()}
-        className="modal-content px-20 py-4 bg-[#0D0029]"
+        className="modal-content px-20 py-4 bg-[#0A1D27]"
         style={{
           borderRadius: '24px',
           position: 'relative',

@@ -31,75 +31,50 @@ html, body {
   overflow: hidden;
 }
 
-.background-element {
-  position: fixed;
+.background-element-blur {
   top: 0;
-  right: -338px;
-  width: 1127px;
-  height: 1127px;
-  background-image: url(/bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  /*animation: slow-rotate 180s linear infinite;*/
-  pointer-events: none;
-}
-
-.background-element-pulse {
-  position: fixed;
-  top: -10%;
-  right: 0;
-  width: 1100px;
-  height: 1100px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  pointer-events: none;
-}
-.background-element-pulse-img {
-  position: absolute;
-  top: 0;
-  right: -35%;
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: pulseBgImg 5s ease-in-out infinite;
-}
-.background-element-pulse-small {
-  height: 800px;
-  width: 800px;
-  background-image: url(/bg-animate/bg-small-ellipse.png);
-  animation-delay: .5s;
-}
-.background-element-pulse-medium {
-  height: 950px;
-  width: 950px;
-  background-image: url(/bg-animate/bg-medium-ellipse.png);
-  animation-delay: 1s;
-}
-.background-element-pulse-big {
+  left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(/bg-animate/bg-big-ellipse.png);
-  animation-delay: 1.5s;
+  background-image: url("/bg-animate/bg-blur.png");
+  background-size: cover;
 }
-@keyframes pulseBgImg {
+.background-element-cube {
+  bottom: 0;
+  right: -20vw;
+  height: 1000px;
+  width: 1000px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='919' height='1034' viewBox='0 0 919 1034' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_3046_2)'%3E%3Cpath d='M8 300.958V733.042C8 760.54 22.6558 786.01 46.5561 799.759L420.843 1015.69C444.744 1029.44 474.055 1029.44 497.956 1015.69L872.243 799.759C896.143 786.01 910.799 760.54 910.799 733.042V300.958C910.799 273.46 896.143 247.99 872.243 234.241L497.956 18.3119C474.055 4.56272 444.744 4.56272 420.843 18.3119L46.5561 234.241C22.8813 247.99 8 273.46 8 300.958Z' fill='url(%23paint0_linear_3046_2)' fill-opacity='0.66'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_3046_2' x='0.4' y='0.4' width='917.999' height='1033.2' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='3.8' result='effect1_foregroundBlur_3046_2'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_3046_2' x1='459.4' y1='8' x2='459.4' y2='1026' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23405D85'/%3E%3Cstop offset='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+
+  background-size: contain;
+
+  animation: levitationCube 5s ease-in-out infinite;
+}
+.background-element-blur,
+.background-element-cube {
+  position: fixed;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+@keyframes levitationCube {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateY(0);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1) translateY(-10px);
   }
   100% {
-    transform: scale(1);
+    transform: scale(1) translateY(0);
   }
 }
 @media (max-width: 1200px) {
- .background-element-pulse {
-   top: -15%;
-   right: -20%;
-   transform: scale(.8);
+ .background-element-cube {
+   bottom: -20vh;
+   right: -30vw;
+   height: 60vh;
+   width: 60vw;
  }
 }
 @keyframes slow-rotate {
@@ -111,10 +86,10 @@ html, body {
   }
 }
 
-@media (max-width: 640px) {
-  .background-element {
-    width: 100%;
-    opacity: 0.3;
+@media (max-width: 956px) {
+  .background-element-cube {
+    bottom: -25vh;
+    right: -20vw;
   }
 }
 
@@ -420,10 +395,9 @@ footer, header {
   width: 100%!important;
 }
 @media (max-width: 576px) {
-  .background-element-pulse {
-    top: -25%;
-    right: -100%;
-    transform: scale(.7);
+  .background-element-cube {
+    height: 50vh;
+    width: 60vw;
   }
 }
 @media (max-width: 390px) {

@@ -21,7 +21,7 @@ const ModalHeader = React.memo(({ onClose }) => (
     </button>
 
     <h2 className="modalTokenHeaderAdap text-xl sm:text-4xl text-center text-white px-5 sm:px-10">
-        $ZOM are tokens of the Zora minter project, which in the future you will be able to mint on your wallet or spend on promotion in Zora memepad.
+      $ARM are tokens of the arbitrum minter project, which in the future you will be able to mint on your wallet or spend on promotion in arbitrum memepad.
     </h2>
 
     <div className="flex justify-center mt-5 mb-5">

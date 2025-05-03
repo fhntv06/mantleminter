@@ -53,12 +53,12 @@ const RevokeModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddre
 
   return (
     <div 
-      className="fixed inset-0 bg-[#1B024F] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[999] transition-opacity duration-600 ease-in-out"
+      className="fixed inset-0 bg-[#0A1D27] bg-opacity-10 backdrop-blur-lg flex items-center justify-center z-[999] transition-opacity duration-600 ease-in-out"
       style={{ opacity: isOpen ? 1 : 0 }}
       onClick={onClose}
     >
       <div 
-        className="relative w-[90%] max-w-[400px] bg-[#0D0029] rounded-[20px] p-6 transition-all duration-600 ease-in-out transform"
+        className="relative w-[90%] max-w-[400px] bg-[#0A1D27] rounded-[20px] p-6 transition-all duration-600 ease-in-out transform"
         style={{ 
           opacity: isOpen ? 1 : 0,
           transform: isOpen ? 'scale(1)' : 'scale(0.95)'
@@ -93,7 +93,7 @@ const RevokeModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddre
           </button>
           <button
             onClick={handleRevokeOwnership}
-            className="px-8 py-2 rounded-full bg-[#3E007B] text-white transition-colors"
+            className="px-8 py-2 rounded-full bg-[#035B78] text-white transition-colors"
             disabled={loading || !account}
           >
             {loading ? "Processing..." : "Revoke"}

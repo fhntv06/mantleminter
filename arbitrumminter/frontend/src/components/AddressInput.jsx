@@ -171,9 +171,9 @@ const AddressInput = forwardRef(({
         onKeyDown={handleKeyDown}
         onBlur={handleBlur}
         onFocus={() => setShowAddressHistory(true)}
-        className="w-full bg-[transparent] placeholder-white border border-[#fff] rounded-xl py-2 pl-11 pr-4 text-white text-[0.925rem]"
+        className="w-full bg-[#545454] placeholder-white border border-[#fff] rounded-full py-2 pl-11 pr-4 text-white text-[0.925rem]"
       />
-      <p className="text-[0.725rem] text-white mt-1 ml-8">
+      <p className="text-[0.725rem] text-[#909090] mt-1 ml-8">
         Enter an existing token contract address.{' '}
         <button onClick={() => setTokenAddress(EXAMPLE_ADDRESS)} className="font-bold hover:text-white">
           Use example
@@ -181,11 +181,11 @@ const AddressInput = forwardRef(({
       </p>
 
       {showAddressHistory && addressHistory.length > 0 && (
-        <div className="absolute w-full bg-[#16023F] hover:bg-[#16023F] border border-white rounded-2xl top-[calc(100%-15px)] z-[999] overflow-hidden">
+        <div className="absolute w-full bg-[#545454] border border-white rounded-2xl top-[calc(100%-15px)] z-[999] overflow-hidden">
           {addressHistory.map((address, index) => (
             <div
               key={index}
-              className="flex items-center px-4 py-2.5 cursor-pointer text-white text-[0.925rem] transition-colors"
+              className="flex items-center bg-[#545454] hover:bg-[#3f3d3d] px-4 py-2.5 cursor-pointer text-white text-[0.925rem] transition-colors"
               onClick={() => handleHistoryClick(address)}
             >
               <RotateCcw size={16} className="mr-2" />

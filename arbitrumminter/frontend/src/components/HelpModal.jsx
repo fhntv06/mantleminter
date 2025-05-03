@@ -43,7 +43,7 @@ const HelpModal = ({ isOpen, onClose }) => {
           <h2 className="text-lg sm:text-xl md:text-2xl text-center mb-6 sm:mb-8 text-white">
             After 100.000 created coins in<br />
             our service, we'll release a<br />
-            mempad on the zora.
+            mempad on the arbitrum.
           </h2>
 
           <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 border-white flex items-center justify-center">

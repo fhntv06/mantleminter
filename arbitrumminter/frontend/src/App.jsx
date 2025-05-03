@@ -239,13 +239,9 @@ function App() {
   };
 
   return (
-      <div className="min-h-screen flex flex-col bg-[#1B024F]">
-        {/*<div className="background-element"/>*/}
-        <div className="background-element-pulse">
-          <span className='background-element-pulse-img background-element-pulse-small'></span>
-          <span className='background-element-pulse-img background-element-pulse-medium'></span>
-          <span className='background-element-pulse-img background-element-pulse-big'></span>
-        </div>
+      <div className="min-h-screen flex flex-col bg-[#040404]">
+        <div className="background-element-blur" />
+        <div className="background-element-cube" />
         <div className="fixed bottom-0 left-0 z-[999]">
           {(notification.message || localNotification.message) && (
               <Notification
@@ -307,9 +303,8 @@ function App() {
         <main className="flex-grow z-10 mb-32">
           <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5">
 
-            <div className='flex flex-col max-w-[350px] mb-8'>
-              <h1 className="text-2xl sm:text-4xl mt-6 sm:mt-10 mb-2 font-semibold">Mint your token</h1>
-              <div className="h-[2px] w-full bg-gradient-to-r from-white to-transparent"></div>
+            <div className='flex flex-col max-w-[350px] mb-11'>
+              <h1 className="text-2xl sm:text-4xl mt-6 sm:mt-10 font-semibold">Mint your token</h1>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.85fr] gap-6 sm:gap-10 lg:gap-20 mb-10 sm:mb-20">

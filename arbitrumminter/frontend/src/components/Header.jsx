@@ -74,18 +74,18 @@ const Header = ({
 
 
   return (
-    <header className="w-full bg-[#16023F] rounded-bl-[25px] sm:rounded-bl-[50px] rounded-br-[25px] sm:rounded-br-[50px] relative z-20">
+    <header className="w-full bg-[#0A0A0A] border border-[#2B2B2B] rounded-bl-[25px] sm:rounded-bl-[50px] rounded-br-[25px] sm:rounded-br-[50px] relative z-20">
       <div className="max-w-[1210px] mx-auto px-4 sm:px-5.5 py-3 sm:py-4 flex justify-between items-center">
         <div className="flex items-center gap-2 cursor-pointer">
           <a onClick={handleClearAddress}>
-            <img src="/img/logo.png" alt="Mantle Logo" className="h-5 sm:h-10" />
+            <img src="/img/logo.png" alt="Mantle Logo" className="h-12 sm:h-[74px]" />
           </a>
         </div>
         
         <div className="flex items-center gap-2 sm:gap-10">
           <button
             ref={buttonRef}
-            className="relative border min-w-5 sm:min-w-40 border-white hover:bg-[#16023F] text-white px-2 sm:px-3 py-1.5 rounded-full flex items-center gap-1 sm:gap-2"
+            className="relative border min-w-5 sm:min-w-40 border-[#0082FF] bg-[#0082FF] hover:bg-[#16023F] text-white px-2 sm:px-3 py-1.5 rounded-full flex items-center gap-1 sm:gap-2"
             onClick={handleWalletClick}
           >
             <div className="flex items-center justify-center gap-2 w-full text-xs sm:text-lg">
