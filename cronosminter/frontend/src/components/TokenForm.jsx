@@ -255,7 +255,7 @@ const TokenForm = ({
           <img
             src="/logo.png"
             alt="Token Icon"
-            className="w-22 cursor-pointer hover:opacity-80 transition-opacity"
+            className="w-12 sm:w-22 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={handleResetFields}
           />
           <div>
@@ -442,7 +442,7 @@ const TokenForm = ({
           <img
             src="/logo.png"
             alt="Token Icon"
-            className="w-22 cursor-pointer hover:opacity-80 transition-opacity"
+            className="w-12 sm:w-22 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={handleResetFields}
           />
           <div>
