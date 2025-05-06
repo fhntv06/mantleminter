@@ -31,77 +31,57 @@ html, body {
   overflow: hidden;
 }
 
-.background-element {
-  position: fixed;
-  top: 0;
-  right: -338px;
-  width: 1127px;
-  height: 1127px;
-  background-image: url(/bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  /*animation: slow-rotate 180s linear infinite;*/
-  pointer-events: none;
-}
-
 .background-element-pulse {
   position: fixed;
-  top: -10%;
-  right: 0;
-  width: 1100px;
-  height: 1100px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   pointer-events: none;
 }
-.background-element-pulse-img {
-  position: absolute;
-  top: 0;
-  right: -35%;
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: pulseBgImg 5s ease-in-out infinite;
+.background-element-pulse-top {
+  top: -432px;
+  left: -27px;
+  width: 796px;
+  height: 924px;
+  background-image: url("data:image/svg+xml,%3Csvg width='836' height='964' viewBox='0 0 836 964' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_3053_2)'%3E%3Cpath d='M412.412 20.5891L20.9948 248.135C20.3789 248.493 20 249.151 20 249.864V714.123C20 714.843 20.3865 715.507 21.0121 715.862L421.564 943.426C422.189 943.781 422.956 943.773 423.574 943.406L815.022 710.759C815.628 710.399 816 709.746 816 709.04V259.003C816 258.295 815.626 257.641 815.017 257.281L414.434 20.5963C413.811 20.228 413.038 20.2253 412.412 20.5891Z' fill='%23000E1A'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_3053_2' x='0' y='0.318176' width='836' height='963.369' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='10' result='effect1_foregroundBlur_3053_2'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+  animation: pulseBgImg 14s 1.5s ease-in-out infinite;
+}
+.background-element-pulse-middle {
+  top: 166px;
+  right: 18px;
+  width: 506px;
+  height: 588px;
+  background-image: url("data:image/svg+xml,%3Csvg width='526' height='608' viewBox='0 0 526 608' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_1192_33543)'%3E%3Cpath d='M259.078 10.5902L10.994 154.966C10.3786 155.324 10 155.983 10 156.695V451.292C10 452.011 10.3861 452.675 11.0112 453.031L264.897 597.425C265.522 597.78 266.29 597.773 266.908 597.405L515.023 449.786C515.629 449.425 516 448.772 516 448.067V162.507C516 161.8 515.627 161.146 515.018 160.786L261.102 10.5974C260.478 10.2285 259.704 10.2258 259.078 10.5902Z' fill='url(%23paint0_linear_1192_33543)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_1192_33543' x='0' y='0.318848' width='526' height='607.367' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='5' result='effect1_foregroundBlur_1192_33543'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_1192_33543' x1='263' y1='598' x2='263' y2='39' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0686692' stop-color='%2300060B'/%3E%3Cstop offset='1' stop-color='%23003361'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  animation: pulseBgImg 18s ease-in-out infinite;
+}
+.background-element-pulse-bottom {
+  top: 630px;
+  left: -164px;
+  width: 828px;
+  height: 962px;
+  background-image: url("data:image/svg+xml,%3Csvg width='868' height='1002' viewBox='0 0 868 1002' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_3053_4)'%3E%3Cpath d='M428.227 20.59L20.9942 257.54C20.3787 257.898 20 258.557 20 259.269V742.718C20 743.437 20.3862 744.101 21.0114 744.456L437.747 981.425C438.372 981.78 439.14 981.773 439.758 981.405L847.022 739.143C847.629 738.783 848 738.13 848 737.425V268.784C848 268.077 847.627 267.423 847.018 267.063L430.251 20.5972C429.628 20.2284 428.853 20.2257 428.227 20.59Z' fill='url(%23paint0_linear_3053_4)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_3053_4' x='0' y='0.318726' width='868' height='1001.37' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='10' result='effect1_foregroundBlur_3053_4'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_3053_4' x1='434' y1='20' x2='434' y2='982' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.245' stop-color='%23000A13'/%3E%3Cstop offset='1' stop-color='%23004079'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+  animation: pulseBgImg 14s .5s ease-in-out infinite;
 }
 .background-element-pulse-small {
-  height: 800px;
-  width: 800px;
-  background-image: url(/bg-animate/bg-small-ellipse.png);
-  animation-delay: .5s;
+  top: 990px;
+  left: 4px;
+  width: 167px;
+  height: 194px;
+  background-image: url("data:image/svg+xml,%3Csvg width='197' height='224' viewBox='0 0 197 224' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_3053_6)'%3E%3Cpath d='M96.5263 15.5899L15.9943 62.4414C15.3787 62.7995 15 63.4579 15 64.1701V159.817C15 160.536 15.3862 161.2 16.0115 161.555L98.4486 208.425C99.0737 208.781 99.8415 208.773 100.459 208.405L181.022 160.489C181.629 160.128 182 159.475 182 158.77V66.0815C182 65.3744 181.627 64.7198 181.018 64.3599L98.55 15.5971C97.9265 15.2284 97.1524 15.2256 96.5263 15.5899Z' fill='url(%23paint0_linear_3053_6)'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_3053_6' x='0' y='0.318604' width='197' height='223.368' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='7.5' result='effect1_foregroundBlur_3053_6'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_3053_6' x1='98.5' y1='15' x2='98.5' y2='209' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2301407A'/%3E%3Cstop offset='1' stop-color='%23021E38'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
 }
-.background-element-pulse-medium {
-  height: 950px;
-  width: 950px;
-  background-image: url(/bg-animate/bg-medium-ellipse.png);
-  animation-delay: 1s;
-}
-.background-element-pulse-big {
-  height: 100%;
-  width: 100%;
-  background-image: url(/bg-animate/bg-big-ellipse.png);
-  animation-delay: 1.5s;
-}
+
 @keyframes pulseBgImg {
   0% {
-    transform: scale(1);
+    transform: translateY(0);
   }
   50% {
-    transform: scale(1.2);
+    transform: translateY(-100px);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
-@media (max-width: 1200px) {
- .background-element-pulse {
-   top: -15%;
-   right: -20%;
-   transform: scale(.8);
- }
-}
+
 @keyframes slow-rotate {
   from {
     transform: rotate(0deg);
@@ -397,11 +377,6 @@ footer, header {
     width: 80px;
     height: 80px;
   }
-  .background-element-pulse {
-    top: -15%;
-    right: -40%;
-    transform: scale(0.7);
-  }
 }
 
 .modal-body::-webkit-scrollbar {
@@ -419,17 +394,38 @@ footer, header {
 .modal-body {
   width: 100%!important;
 }
-@media (max-width: 576px) {
-  .background-element-pulse {
-    top: -25%;
-    right: -100%;
-    transform: scale(.7);
+@media (max-width: 1100px) {
+  .background-element-pulse-top {
+    top: -32px;
+    width: 496px;
+    height: 524px;
+  }
+  .background-element-pulse-middle {
+    top: 366px;
+    width: 406px;
+    height: 488px;
+  }
+  .background-element-pulse-bottom {
+    top: 830px;
+    left: -144px;
+    width: 428px;
+    height: 562px;
   }
 }
-@media (max-width: 390px) {
-  .background-element-pulse {
-    top: -25%;
-    right: -100%;
-    transform: scale(.7);
+@media (max-width: 576px) {
+  .background-element-pulse-top {
+    top: -32px;
+    width: 296px;
+    height: 524px;
+  }
+  .background-element-pulse-middle {
+    top: 366px;
+    width: 206px;
+    height: 288px;
+  }
+  .background-element-pulse-bottom {
+    left: -44px;
+    width: 228px;
+    height: 362px;
   }
 }
