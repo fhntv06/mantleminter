@@ -13,7 +13,7 @@ const CONTRACT_ABI = [
   }
 ];
 
-const RevokeModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress, setIsWalletModalOpen, setNotification, setTokenAddress, handleUpdateTokenInfo}) => {
+const RevokeModal = ({ isOpen, onClose, tokenSymbol = 'COM', account, tokenAddress, setIsWalletModalOpen, setNotification, setTokenAddress, handleUpdateTokenInfo}) => {
   const [loading, setLoading] = useState(false);
 
   if (!isOpen) return null;

@@ -29,8 +29,8 @@ class WalletKitManager {
         this.instance = new WalletKit({
           core: this.core,
           metadata: {
-            name: 'Mantle Minter',
-            description: 'Mantle Minter Token Creation Platform',
+            name: 'Cronos Minter',
+            description: 'Cronos Minter Token Creation Platform',
             url: window.location.origin,
             icons: [`${window.location.origin}/img/logo.png`]
           },

@@ -14,7 +14,7 @@ const CONTRACT_ABI = [
   }
 ];
 
-const BurnModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress, setIsWalletModalOpen, setNotification, setTokenAddress , handleUpdateTokenInfo}) => {
+const BurnModal = ({ isOpen, onClose, tokenSymbol = 'COM', account, tokenAddress, setIsWalletModalOpen, setNotification, setTokenAddress , handleUpdateTokenInfo}) => {
   const [amount, setAmount] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -118,7 +118,7 @@ const BurnModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress
         <div className="flex justify-center">
           <button
             onClick={handleBurn}
-            className="px-8 py-2 rounded-full bg-[#1B024F] text-white transition-colors"
+            className="px-8 py-2 rounded-full bg-[#033562] text-white transition-colors"
             disabled={loading || !account}
           >
             {loading ? "Processing..." : "Burn"}

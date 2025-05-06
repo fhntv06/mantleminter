@@ -85,7 +85,7 @@ const Header = ({
         <div className="flex items-center gap-2 sm:gap-10">
           <button
             ref={buttonRef}
-            className="relative border min-w-25 sm:min-w-40 border-white hover:bg-[#16023F] text-white px-2 sm:px-3 py-1.5 rounded-full flex items-center gap-1 sm:gap-2"
+            className="relative border min-w-25 sm:min-w-40 border-white hover:bg-[#545454] text-white px-2 sm:px-6 py-1.5 rounded-full flex items-center gap-1 sm:gap-2"
             onClick={handleWalletClick}
           >
             <div className="flex items-center justify-center gap-2 w-full text-[10px] sm:text-lg">

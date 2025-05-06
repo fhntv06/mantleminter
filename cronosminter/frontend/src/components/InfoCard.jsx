@@ -173,9 +173,9 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
       </p>
       <button
         onClick={onOpenModal}
-        className='block rounded-full px-5 py-2.5 text-white text-xl border-[2px] border-[#ffffff] mt-16 ml-auto mr-auto'
+        className='block rounded-full px-5 py-2.5 text-white hover:bg-[#545454] text-xl border-[2px] border-[#ffffff] mt-16 ml-auto mr-auto'
       >
-        {score || 0}{" $MAM"}
+        {score || 0}{" $COM"}
       </button>
       <button
         onClick={onOpenHelpModal}

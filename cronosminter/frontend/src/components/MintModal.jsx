@@ -14,7 +14,7 @@ const CONTRACT_ABI = [
   }
 ];
 
-const MintModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress, setNotification, setIsWalletModalOpen, setTokenAddress, handleUpdateTokenInfo }) => {
+const MintModal = ({ isOpen, onClose, tokenSymbol = 'COM', account, tokenAddress, setNotification, setIsWalletModalOpen, setTokenAddress, handleUpdateTokenInfo }) => {
   const [amount, setAmount] = useState('');
   const [loading, setLoading] = useState(false);
 
