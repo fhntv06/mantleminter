@@ -169,7 +169,7 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
         ERC20 Token is the fungible token standard for Cronos Blockchain. This free educational tool allows you to deploy your own token to mainnet in one click. You will need at least 0.01 CRO for deployment fees.
       </p>
       <p className="mb-6 text-base sm:text-xl font-normal">
-        For each coin created you get <b>100 $COM</b> points, as well as for each 10 created coins you get <b>10.000 $COM</b> points, in the future these points will be converted into tokens and all active users will receive aidrop, below you can see your statistics:
+        For each coin created you get <b>100 $COM</b> points, as well as for each 10 created coins you get <b>10.000 $COM</b> points, in the future these points will be converted into tokens and all active users will receive airdrop, below you can see your statistics:
       </p>
       <button
         onClick={onOpenModal}
