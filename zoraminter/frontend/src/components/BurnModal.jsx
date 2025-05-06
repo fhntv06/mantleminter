@@ -14,7 +14,7 @@ const CONTRACT_ABI = [
   }
 ];
 
-const BurnModal = ({ isOpen, onClose, tokenSymbol = 'MAM', account, tokenAddress, setIsWalletModalOpen, setNotification, setTokenAddress , handleUpdateTokenInfo}) => {
+const BurnModal = ({ isOpen, onClose, tokenSymbol = 'ZOM', account, tokenAddress, setIsWalletModalOpen, setNotification, setTokenAddress , handleUpdateTokenInfo}) => {
   const [amount, setAmount] = useState('');
   const [loading, setLoading] = useState(false);
 
