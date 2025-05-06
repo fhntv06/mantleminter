@@ -15,7 +15,7 @@ const _k = (d) => {
 const _v = (k) => ((k ^ 0x4d2) - 0x4d2) <= 19810;
 
 const EXAMPLE_VALUES = {
-  tokenName: 'ZoraMinter',
+  tokenName: 'ArbitrumMinter',
   tokenSymbol: '',
   decimals: '',
   tokensToMint: '1000000'
@@ -464,7 +464,7 @@ const TokenForm = ({
             />
             <p className="text-[0.725rem] text-[#5D5D5D] mt-1.75 ml-4">
               Your project unabbreviated name with spaces (usually 1-3 words).{' '}
-              <button onClick={() => setTokenName('ZoraMinter')} className="font-bold hover:text-white">
+              <button onClick={() => setTokenName('ArbitrumMinter')} className="font-bold hover:text-white">
                 Use example
               </button>
             </p>
@@ -480,7 +480,7 @@ const TokenForm = ({
             />
             <p className="text-[0.725rem] text-[#5D5D5D] mt-1.75 ml-4">
               Currency symbol appearing in balance (usually 3-5 uppercase chars).{' '}
-              <button onClick={() => setTokenSymbol('ZOM')} className="font-bold hover:text-white">
+              <button onClick={() => setTokenSymbol('ARM')} className="font-bold hover:text-white">
                 Use example
               </button>
             </p>
@@ -503,7 +503,7 @@ const TokenForm = ({
             }}
           />
           <p className="text-[0.725rem] text-[#5D5D5D] ml-4">
-            The decimal precision of your token (18 is Zora default).{' '}
+            The decimal precision of your token (18 is Arbitrum default).{' '}
             <button onClick={() => setDecimals(18)} className="font-bold hover:text-white">
               Use example
             </button>

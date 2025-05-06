@@ -164,7 +164,7 @@ const InfoCard = ({ onOpenModal, onOpenHelpModal, owner }) => {
   return (
     <div className="glass-card rounded-3xl p-6 relative">
       <h2 className="text-2xl sm:text-4xl mb-4 font-normal">This is an open source tool</h2>
-      <div className="h-[1px] w-full bg-white to-transparent mb-5"></div>
+      <div className="h-[2px] w-full bg-gradient-to-r from-white to-transparent mb-5"></div>
       <p className="mb-6 text-base sm:text-xl font-normal">
         ERC20 Token is the fungible token standard for Arbitrum Blockchain. This free educational tool allows you to deploy your own token to mainnet in one click. You will need at least 0.001 ETH for deployment fees.
       </p>

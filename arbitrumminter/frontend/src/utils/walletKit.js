@@ -29,8 +29,8 @@ class WalletKitManager {
         this.instance = new WalletKit({
           core: this.core,
           metadata: {
-            name: 'Zora Minter',
-            description: 'Zora Minter Token Creation Platform',
+            name: 'Arbitrum Minter',
+            description: 'Arbitrum Minter Token Creation Platform',
             url: window.location.origin,
             icons: [`${window.location.origin}/img/logo.png`]
           },
