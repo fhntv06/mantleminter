@@ -267,7 +267,7 @@ function App() {
         />
 
         <MainModal
-            isOpen={true}
+            isOpen={isModalOpen}
             onClose={() => setIsModalOpen(false)}
             coins={coins}
         />

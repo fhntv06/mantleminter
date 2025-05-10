@@ -171,7 +171,7 @@ const AddressInput = forwardRef(({
         onKeyDown={handleKeyDown}
         onBlur={handleBlur}
         onFocus={() => setShowAddressHistory(true)}
-        className="w-full bg-white placeholder-black border-[3px] border-black rounded-full py-2 pl-11 pr-4 text-black text-[0.925rem]"
+        className="w-full bg-white placeholder-black border-[3px] border-black rounded-full py-2 pl-11 pr-4 text-black text-[0.925rem] focus:border-[#A5A5A5]"
       />
       <p className="text-[0.725rem] text-[#5A5A5A] mt-1 ml-8">
         Enter an existing token contract address.{' '}

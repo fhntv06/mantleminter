@@ -223,9 +223,9 @@ input:focus-within {
 }
 
 /* Only show focus styles when no owner or for the last input */
-input:not([readonly]):focus {
-  border-color: white !important;
-  box-shadow: 0 0 0 1px white !important;
+input:focus {
+  border-color: white;
+  box-shadow: 0 0 0 1px white;
 }
 
 /* Disable iOS default styles */

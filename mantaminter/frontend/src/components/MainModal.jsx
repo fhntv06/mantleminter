@@ -36,7 +36,7 @@ const ModalHeader = React.memo(({ onClose }) => (
 ));
 
 const SearchSection = React.memo(() => (
-  <div className="flex justify-center items-center mb-4">
+  <div className="flex justify-center items-center mb-4 gap-2">
     <div className="relative">
       <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 text-white" size={14} />
       <input
